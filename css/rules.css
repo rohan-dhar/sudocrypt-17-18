@@ -1,0 +1,18 @@
+
+#rule-list{
+	display: block;
+	width: 56%;
+	position: relative;
+	margin: auto;
+	text-align: justify;
+	margin-top: 70px;
+	margin-bottom: 40px;
+}
+
+#rule-list li{
+	margin-top: 17px;
+	margin-bottom: 17px;
+	font-size: 10pt;
+	font-weight: 400;
+	color: #666;
+}

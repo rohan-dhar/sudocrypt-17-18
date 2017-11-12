@@ -1,0 +1,99 @@
+header{
+	box-shadow: none;
+	background-color: inherit;	
+}
+
+
+.ui-menu-item{
+	color: #5AA6F8;
+}
+
+
+#cont{
+	width: 400px;
+	height: 190px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	bottom: 70px;
+	right: 0px;
+	margin: auto;
+}
+
+h1, .sub, .time{
+	width: 100%;	
+}
+
+
+h1{
+	font-size: 40pt;
+	font-weight: 700;
+	color: #5AA6F8;
+	text-transform: uppercase;
+	margin-top: 5px;
+}
+
+h1 span{
+	font-weight: 200;
+}
+
+
+.sub{
+	font-weight: 300;
+	color: #555;
+	font-size: 30pt;
+}
+
+.time{
+	margin-top: 30px;
+	font-weight: 400;
+	color: #696969;
+}
+
+
+.time span{
+	font-weight: 600;
+
+}
+
+
+footer{
+	position: fixed;
+	height: 60px;
+	line-height: 60px;
+	width: 100%;
+	text-align: center;
+	bottom: 0px;
+	left: 0px;
+	background-color: inherit;
+	font-size: 9pt;
+	font-weight: 600;
+}
+
+footer a{
+	color: #5AA5F9;
+	transition: all 0.3s;
+}
+
+footer a:hover{
+	color: #1562b7;
+}
+
+@media only screen and (max-width: 540px) {
+	h1{
+		font-size: 30pt;
+	}
+
+	.sub{
+		font-size: 20pt;
+	}
+	
+	.time{
+		font-size: 10.5pt;
+	}
+
+	#cont{
+		width: 310px;
+	}
+
+}

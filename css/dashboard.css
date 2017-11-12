@@ -1,0 +1,172 @@
+body{
+	text-align: center;
+}
+
+.welcome{
+	text-align: center;
+	color: #444;
+	position: relative;
+	top: 7%;
+	font-weight: 300;
+	font-size: 23pt;
+}
+
+.welcome b{
+	font-weight: 600;
+}
+
+.welcome-name{
+	max-width: 70%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;	
+	vertical-align: top;
+	display: inline-block;
+
+}
+
+.extra-info{
+	font-size: 9pt;
+	font-weight: 600;
+	text-transform: initial;
+	letter-spacing: 0px;
+	color: rgba(10,10,10,0.4);
+	margin-top: 6px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.ui-page-head{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.cont{
+	display: none;
+	height: 160px;
+	width: 400px;
+	/*background-color: red;*/
+	position: absolute;
+	left: 0px;
+	top: 0px; /*70px;*/
+	bottom: 0px;
+	right: 0px;	
+	margin: auto;
+	opacity: 0;
+}
+
+#cont-det{
+	display: block;
+	opacity: 1;
+	top: 27%;
+	left: 40px;
+}
+
+@media only screen and (max-width: 525px) {
+	.cont{
+		width: 360px;
+	}
+
+	.det-data{
+		width: 220px !important;		
+	}
+
+	#cont-det{
+		left: 0px;
+	}
+	
+}
+
+
+.det-box{
+	position: relative;
+	margin: auto;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 2px;
+	text-align: left;
+}
+
+.det-type, .det-data{
+	display: inline-block;
+	height: 100%;
+	font-size: 11pt;
+	vertical-align: top;	
+}
+
+.det-type{
+	font-size: 10pt;
+	font-weight: 500;
+	width: 90px;
+	color: #5797ef;
+	text-align: right;
+	margin-right: 15px;
+}
+
+.det-data{
+	margin-left: 15px;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 280px;
+	text-overflow: ellipsis;	
+}
+
+.dash-btn{
+	display: block;
+	position: absolute;	
+	margin-left: 6px;
+	margin-right: 6px;		
+	bottom: 10%;
+	left: 50%;
+	width: 150px;	
+}
+
+#change-pass, #cancel-extra{
+	border-color: #ee6166;
+	color: #ee6166;
+}
+
+#change-pass{
+	margin-left: -160px;
+}
+
+#change-user{
+	margin-left: 10px;
+}
+
+
+#change-pass:hover, #cancel-extra:hover{
+	background-color: #ee6166;
+	color: #fff;
+}
+
+#cancel-extra{
+	margin-left: -75px;
+	display: none;
+}
+
+#cont-user, #cont-pass{
+	text-align: center;
+}
+
+#user-username, #pass-pass, #pass-pass-conf{
+	width: 280px;
+	margin: auto;
+	margin-top: 30px;
+}
+
+#pass-pass{
+	margin-top: 10px;
+}
+
+#pass-pass-conf{
+	margin-top: 6px;
+}
+
+
+#user-go, #pass-go{
+	width: 80px;
+	height: 38px;
+	margin-top: 20px;
+}

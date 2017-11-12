@@ -1,0 +1,37 @@
+
+.ui-page-head, header{
+	background-color: inherit;
+}
+
+.ui-menu-item, .ui-page-head{
+	color: #5AA6F8;
+}
+
+
+#cont{
+	position: relative;	
+	margin: auto;
+	margin-top: 80px;
+}
+
+.ui-txt-inp{
+	display: block;
+	margin: auto;
+}
+
+.log-inp{
+	margin-top: 8px;
+	width: 220px;
+}
+
+#log-go{
+	display: block;
+	margin: auto;
+	margin-top: 30px;
+	width: 110px;
+	height: 38px;
+}
+
+#log-email{
+	margin-top: 30px;
+}

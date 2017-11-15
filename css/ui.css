@@ -28,35 +28,41 @@ header{
 	top: 0px;
 	left: 0px;
 	height: 85px;
+	box-shadow: 0px 2px 3px 0px rgba(10,10,10,0.06);
 	width: 100%;
-	z-index: 2;
+	z-index: 11;
 	background-color: #5da4ff;
+	overflow: hidden;
 	text-align: center;
-	box-shadow: 0px 3px 5px 1px rgba(10,10,10,0.1);
+	position: relative;
+}
+
+.ui-header-mobile-menu, .ui-header-menu-open{
+	display: none;
 }
 
 .ui-header-logo{
 	vertical-align: middle;
 	display: inline-block;
-	height: 45px;
+	height: 40px;
 	width: auto;
 	position: relative;
-	top: 20px;
-	margin-left: 45px;
-	margin-right: 45px;
+	top: 23px;
+	margin-left: 25px;
+	margin-right: 25px;
 }
 
 .ui-menu-item{
 	position: relative;
-	display: inline-block;
-	vertical-align: middle;
+	display: inline-block !important;
+	vertical-align: middle;	
 	text-transform: uppercase;
 	font-weight: 500;
 	color: #fff;
-	font-size: 9pt;
-	width: 95px;
-	top: 20px;
-	margin-right: 5px;
+	font-size: 8pt;
+	top: 23px;
+	margin-right: 15px;
+	margin-left: 15px;
 	transition: all 0.3s;
 	cursor: pointer;
 }
@@ -65,19 +71,76 @@ header{
 	opacity: 0.7;
 }
 
-@media only screen and (max-width: 565px) {
+@media only screen and (max-width: 760px) {
+	
+	header{
+		overflow: hidden;		
+	}
+
+	.ui-header-mobile-menu{		
+		display: none;
+		opacity: 0;
+		background-color: #5da3ff;
+		position: fixed;
+		top: 85px;
+		left: 0px;
+		height: 100%;
+		width: 100%;
+	}
+
+	.ui-header-menu-open{
+		position: absolute;
+		cursor: pointer;
+		display: block;		
+		width: 39px;
+		height: 39px;
+		left: 26px;
+		top: 24px;				
+		border-radius: 100%;
+		-webkit-transition: background-color 0.4s;
+		-moz-transition: background-color 0.4s;
+		-ms-transition: background-color 0.4s;
+		transition: background-color 0.4s;		
+	}
+
+	.ui-header-menu-open-active{
+		background-color: rgba(255, 255, 255, 0.3);
+	}	
+
+	.ui-header-menu-open-stick{
+		display: block;
+		position: relative;
+		margin: auto;
+		width: 23px;
+		height: 3px;
+		margin-top: 3px;
+		top: 9px;
+		background-color: rgba(10,10,10,0.25);
+	}
+
 	.ui-header-logo{
-		margin-left: 4px;
-		margin-right: 4px;
-		height: 41px;
-		top: 22px;
+		display: block;
+		position: absolute;
+		height: 45px;
+		margin: 0px;
+		margin-left: -20px;
+		left: 50%;
+		top: 20px;
 	}
 
 	.ui-menu-item{
-		margin-left: 0px;
-		margin-right: 0px;
-		width: 75px;
-		font-size: 8pt;
+		display: none;
+		text-align: center;
+		top: 140px;		
+		text-align: center;
+		color: #fff;
+		height: 45px;
+		line-height: 45px;
+		width: 70%;
+		font-weight: 500;
+		font-size: 9pt;
+		opacity: 0;
+		margin: auto;
 	}
 }
 
@@ -96,11 +159,11 @@ header{
 
 .ui-page-head{
 	text-align: center;
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	text-transform: uppercase;
 	color: #fff;
-	background-color: #5698ef;
+	background-color: #4e91ea;
 	font-size: 12pt;
 	letter-spacing: 2px;
 }
@@ -112,7 +175,8 @@ header{
 	height: 41px;
 	width: 150px;
 	text-transform: uppercase;
-	font-weight: 600;
+	font-weight: 700;
+	font-size: 8pt;
 	transition: all 0.3s;
 	cursor: pointer;
 }
@@ -120,4 +184,80 @@ header{
 .ui-btn:hover{
 	background-color: #5AA5F9;
 	color: #fff;
+}
+
+.ui-load {
+	position: relative;
+	width: 36px;
+	height: 36px;
+	border-radius: 100%;
+}
+
+.ui-load-box {
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	opacity: 0.7;
+	transform: translate3d(0,0,0);
+	border-radius: 0px;
+}
+
+.ui-load-box-1 {
+	background-color: #ff6b7a;
+	top: 0;
+	left: 0;
+	animation: ui-load-box-1-anim 1.8s ease-in infinite;
+}
+
+.ui-load-box-2 {
+	background-color: #6098ff;
+	top: 0;
+	right: 0;
+	animation: ui-load-box-2-anim 1.8s ease-in infinite;
+}
+
+.ui-load-box-3 {
+	background-color: #3fd28c;
+	bottom: 0;
+	right: 0;	
+	animation: ui-load-box-3-anim 1.8s ease-in infinite;
+}
+
+.ui-load-box-4 {
+	background-color: #ffcb5f;
+	bottom: 0;
+	left: 0;
+	animation: ui-load-box-4-anim 1.8s ease-in infinite;
+}
+
+@keyframes ui-load-box-1-anim {
+	0%{transform: translate(0px, 0px)} 
+	25% {transform: translate(0px, 18px)} 
+	50% {transform: translate(18px, 18px)} 
+	75% {transform: translate(18px, 0px)}   
+	100% {transform: translate(0px, 0px)}
+}
+
+@keyframes ui-load-box-2-anim {
+	0%{transform: translate(0px, 0px)} 
+	18% {transform: translate(-18px, 0px)} 
+	50% {transform: translate(-18px, 18px)} 
+	75% {transform: translate(0px, 18px)}   
+	100% {transform: translate(0px, 0px)}
+}
+
+@keyframes ui-load-box-3-anim {
+	0%{transform: translate(0px, 0px)} 
+	18% {transform: translate(0px, -18px)} 
+	50% {transform: translate(-18px, -18px)} 
+	75% {transform: translate(-18px, 0px)}   
+	100% {transform: translate(0px, 0px)}
+}
+
+@keyframes ui-load-box-4-anim {
+	0%{transform: translate(0px, 0px)} 
+	18% {transform: translate(18px, 0px)} 
+	50% {transform: translate(18px, -18px)} 
+	75% {transform: translate(0px, -18px)} 
+	100% {transform: translate(0px, 0px)}
 }

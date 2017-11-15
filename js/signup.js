@@ -68,7 +68,7 @@ $(document).ready(function(){
 				if(d[0]){
 					swal({
 						title: "You have signed up!",
-						html: "SudoCrypt will start at 00:00:00 on 20 November 2017 and will last till 11:59:59 on 21 November 2017. All the best!",
+						html: "Sudocrypt will start at 00:00:00 on 20 November 2017 and will last till 11:59:59 on 21 November 2017. All the best!",
 						type: "success",
 					}).then(function(){
 						window.location.href = 'index.php';
@@ -76,7 +76,7 @@ $(document).ready(function(){
 				}else if(d[1] == "ALREADY"){
 					swal({
 						title: "Whoops!",
-						html: "You have already signed up for SudoCrypt. SudoCrypt will start at 00:00:00 on 20 November 2017 and will last till 11:59:59 on 21 November 2017. All the best!",
+						html: "You have already signed up for Sudocrypt. Sudocrypt will start at 00:00:00 on 20 November 2017 and will last till 11:59:59 on 21 November 2017. All the best!",
 						type: "error",
 					}).then(function(){
 						window.location.href = 'index.php';
@@ -116,7 +116,6 @@ $(document).ready(function(){
 
 	}
 	
-
 	$("#reg-go").click(register);
 
 });

@@ -15,7 +15,7 @@
 	$loggedIn = false;
 	$styles = ["css/signin.css"];
 	$scripts = ["js/signin.js"];
-	$title = "SudoCrypt | Sign In";
+	$title = "Sudocrypt | Sign In";
 
 ?>
 <!DOCTYPE html>

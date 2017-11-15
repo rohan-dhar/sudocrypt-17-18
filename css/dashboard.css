@@ -58,7 +58,7 @@ body{
 #cont-det{
 	display: block;
 	opacity: 1;
-	top: 27%;
+	top: 17%;
 	left: 40px;
 }
 
@@ -119,7 +119,7 @@ body{
 	margin-right: 6px;		
 	bottom: 10%;
 	left: 50%;
-	width: 150px;	
+	width: 150px;		
 }
 
 #change-pass, #cancel-extra{

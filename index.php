@@ -9,7 +9,7 @@
 
 	$styles = ["css/index.css"];
 	$scripts = ["js/index.js"];
-	$title = "SudoCrypt | Home";
+	$title = "Sudocrypt | Home";
 
 ?>
 <!DOCTYPE html>
@@ -22,7 +22,8 @@
 
 		<div id="cont">			
 			<h2 class="sub">It's here.</h2> 
-			<h1>SudoCrypt <span>7</span></h1>		
+			<h1>
+			Sudocrypt <span>7</span></h1>		
 			<h4 class="time">From <span>00:00:00</span> on <span>20 November 2017</span> <br>to <span>11:59:59</span> on <span>21 November 2017</span></h4>
 		</div>
 

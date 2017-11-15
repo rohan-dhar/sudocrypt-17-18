@@ -1,6 +1,7 @@
 
 .ui-page-head, header{
 	background-color: inherit;
+	box-shadow: none;
 }
 
 .ui-menu-item, .ui-page-head{
@@ -34,4 +35,76 @@
 
 #log-email{
 	margin-top: 30px;
+}
+
+@media only screen and (max-width: 760px) {
+	
+	header{
+		overflow: hidden;		
+	}
+
+	.ui-header-mobile-menu{		
+		display: none;
+		opacity: 0;
+		background-color: inherit;
+		position: fixed;
+		top: 85px;
+		left: 0px;
+		height: 100%;
+		width: 100%;
+	}
+
+	.ui-header-menu-open{
+		position: absolute;
+		cursor: pointer;
+		display: block;		
+		width: 39px;
+		height: 39px;
+		left: 26px;
+		top: 24px;				
+		border-radius: 100%;
+		-webkit-transition: background-color 0.4s;
+		-moz-transition: background-color 0.4s;
+		-ms-transition: background-color 0.4s;
+		transition: background-color 0.4s;		
+	}
+
+	.ui-header-menu-open-active{
+		background-color: rgba(10,10,10,0.06);
+	}	
+
+	.ui-header-menu-open-stick{
+		display: block;
+		position: relative;
+		margin: auto;
+		width: 23px;
+		height: 3px;
+		margin-top: 3px;
+		top: 9px;
+		background-color: rgb(90, 165, 249);
+	}
+
+	.ui-header-logo{
+		display: block;
+		position: absolute;
+		height: 45px;
+		margin: 0px;
+		margin-left: -20px;
+		left: 50%;
+		top: 20px;
+	}
+
+	.ui-menu-item{
+		display: none;
+		text-align: center;
+		top: 140px;		
+		text-align: center;
+		height: 45px;
+		line-height: 45px;
+		width: 70%;
+		font-weight: 500;
+		font-size: 9pt;
+		opacity: 0;
+		margin: auto;
+	}
 }

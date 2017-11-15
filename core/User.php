@@ -54,7 +54,7 @@ class User{
 
 		$pass = password_hash($pass, PASSWORD_DEFAULT);
 
-		$qry = $db->prepare("INSERT INTO users (name, email, userName, password, organisation, country, ipCountry, level, dq) VALUES(:name, :email, :userName, :pass, :ins, :cnt, :iCnt, 0, 0)");
+		$qry = $db->prepare("INSERT INTO users (name, email, userName, password, organisation, country, ipCountry, levelId, dq) VALUES(:name, :email, :userName, :pass, :ins, :cnt, :iCnt, 0, 0)");
 		$qry->execute([
 			":name" => $name,
 			":email" => $email,
@@ -181,18 +181,54 @@ class User{
 		return [true];
 	}
 
+	public function getId(){
+		return $this->$id;
+	}
+
 	public function getDetails($uid = false){
 		$db = $GLOBALS["db"];
 
 		if($uid === false){
 			$uid = $this->id;
 		}
-		$qry = $db->prepare("SELECT id, name, email, userName, organisation, country, level, dq FROM users WHERE id = :uid");
+		$qry = $db->prepare("SELECT id, name, email, userName, organisation, country, levelId, dq FROM users WHERE id = :uid");
 		$qry->execute([":uid" => $uid]);
 		$res = $qry->fetch(PDO::FETCH_ASSOC);
 		return $res;
 	}
 
+	public function getScore($uid = false){
+		$db = $GLOBALS["db"];
+
+		$levelPoints = 0; $firstCrossPoints = 0; $sudoQuestPoints = 0;
+
+		if($uid === false){
+			$uid = $this->id;
+		}
+
+		$qry = $db->prepare("SELECT * FROM levels WHERE crossedBy = :uid");
+		$qry->execute([":uid" => $uid]);
+		$res = $qry->fetchAll(PDO::FETCH_ASSOC);
+		if(isset($res[0]["id"])){
+			$firstCrossPoints = $GLOBALS["points"]["firstCrossLevel"] * count($res);
+		}
+
+		$qry = $db->prepare("SELECT * FROM gameAttempts WHERE uid = :uid AND correct = 1");
+		$qry->execute([":uid" => $uid]);
+		$res = $qry->fetchAll(PDO::FETCH_ASSOC);
+		if(isset($res[0]["id"])){
+			$levelPoints = $GLOBALS["points"]["levels"] * count($res);
+		}
+
+		$qry = $db->prepare("SELECT * FROM  sudoQuestAttempts WHERE uid = :uid AND correct = 1");
+		$qry->execute([":uid" => $uid]);
+		$res = $qry->fetchAll(PDO::FETCH_ASSOC);
+		if(isset($res[0]["id"])){
+			$sudoQuestPoints = $GLOBALS["points"]["sudoQuest"] * count($res);
+		}
+
+		return ($levelPoints + $firstCrossPoints + $sudoQuestPoints);
+	}
 };
 
 ?>

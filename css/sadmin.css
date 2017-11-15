@@ -1,0 +1,72 @@
+td, th{
+	padding-left: 10px;
+	padding-right: 10px;	
+	padding-top: 6px;
+	padding-bottom: 6px;
+	font-size: 10pt;
+}
+
+th{
+	font-size: 9pt;
+}
+
+.ques-col{
+	text-align: left;
+	width: 60%;
+}
+
+.status-red{
+	background-color: #ff565b;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 8pt;
+	font-weight: 700;
+}
+.status-green{
+	background-color: #3ad089;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 8pt;
+	font-weight: 700;
+}
+.status-blue{
+	background-color: #5da3ff;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 8pt;
+	font-weight: 700;
+}
+
+
+.sub-head{
+	margin-top: 40px;
+	text-align: center;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 13pt;
+	color: #444;
+	margin-bottom: 25px;
+}
+
+#add-ques, #add-ans, #add-go{
+	display: block;
+	width: 340px;	
+	margin: auto;
+	margin-top: 4px;
+	font-size: 9.3pt;
+}
+
+#add-ques{
+	padding: 15px;
+	resize: none;
+	height: 60px;
+	width: 330px;	
+}
+
+#add-go{
+	width: 140px;
+	margin-top: 15px;
+}
+#inv{
+	height: 40px;
+}

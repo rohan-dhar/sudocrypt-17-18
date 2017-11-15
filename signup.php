@@ -4,7 +4,8 @@
 
 	$styles = ["css/signup.css"];
 	$scripts = ["js/signup.js"];
-	$title = "SudoCrypt | Sign Up";
+	$title = "
+Sudocrypt | Sign Up";
 
 ?>
 <!DOCTYPE html>
@@ -14,7 +15,8 @@
 	</head>
 	<body>
 		<?php require("struct/header.php"); ?>	
-		<h2 class="ui-page-head">Sign Up For SudoCrypt 2017</h2>
+		<h2 class="ui-page-head">Sign Up For 
+Sudocrypt 2017</h2>
 		<input type="text" class="ui-txt-inp reg-inp" placeholder="Name" id="reg-name">
 		<input type="email" class="ui-txt-inp reg-inp" placeholder="Email" id="reg-email">
 		<br>

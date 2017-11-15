@@ -11,7 +11,7 @@
 
 	$styles = ["css/rules.css"];
 	$scripts = [];
-	$title = "SudoCrypt | Rules";
+	$title = "Sudocrypt | Rules";
 
 ?>
 <!DOCTYPE html>

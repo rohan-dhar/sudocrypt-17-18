@@ -5,18 +5,23 @@
 
 	$u = new User;
 	$u->startSess();
+	$user = $u->authSess();
 
-	if(!$u->authSess()[0]){
+	if(!$user[0]){
 		header("Location: index.php");
 		exit();
 	}
 
+	if($user[1]["dq"] != 0){
+		header("Location: dq.php");
+		exit();		
+	}
 
 	$loggedIn = true;
 	$styles = ["css/dashboard.css"];
 	$scripts = ["js/dashboard.js"];
-	$title = "SudoCrypt | Dashboard";
-	$det = $u->getDetails();
+	$title = "Sudocrypt | Dashboard";
+	$det = $user[1];
 
 ?>
 
@@ -29,9 +34,6 @@
 		<?php require("struct/header.php"); ?>	
 		<h2 class="ui-page-head">
 			Dashboard
-			<div class="extra-info">
-				Sudocrypt 7.0 will start at 00:00:00 on 20st November 2017 and end at 23:59:59 on 21nd November 2017 (IST)
-			</div>
 		</h2>
 	
 		<h3 class="welcome">Welcome, <span class="welcome-name"><b><?php echo htmlentities($det["name"]); ?></b></span></h3>
@@ -52,11 +54,14 @@
 			<div class="det-box" id="det-box-user">				
 				<div class="det-type">Username</div><div class="det-data"> <?php echo htmlentities($det["userName"]); ?> </div>
 			</div>	
+			<div class="det-box" id="det-box-score">				
+				<div class="det-type">Score</div><div class="det-data"> <?php echo htmlentities($u->getScore()); ?> </div>
+			</div>	
 			<div class="det-box">				
 				<div class="det-type">Institute</div><div class="det-data"> <?php echo htmlentities($det["organisation"]); ?> </div>
 			</div>	
 			<div class="det-box">				
-				<div class="det-type">Country</div><div class="det-data"> <?php echo htmlentities($det["country"]); ?> </div>				
+				<div class="det-type">Country</div><div class="det-data"> <?php echo htmlentities($det["country"]); ?> </div>
 			</div>	
 		</div>
 
